@@ -58,12 +58,33 @@ nav ul li a:hover {
 /* Section principale */
 main {
     padding: 20px;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 main h2 {
     font-size: 1.8em;
     margin-bottom: 10px;
+}
+
+main .content {
+    max-width: 60%;
+    text-align: left;
+}
+
+main .photo {
+    max-width: 35%;
+    text-align: center;
+}
+
+main .photo img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Pied de page */
