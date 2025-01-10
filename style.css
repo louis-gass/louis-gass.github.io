@@ -1,34 +1,65 @@
+/* Variables pour les couleurs */
+:root {
+    --theme_1: #fff9c4; /* Menu */
+    --theme_2: #fffde7; /* Titre, plus clair que le menu */
+	--theme_3: #333333; /*couleur des bordures*/
+    --hover-color: #f1e267; /* Hover */
+    --texte-principal: #333333; /* Texte principal */
+    --texte-blanc: #333333; /* Texte titre et menu */
+    --fond-principal: #f9f9f9; /* Fond */
+    --bordure-image: #333333; /* Bordure image */
+}
+
+
+
+
 /* Styles généraux */
-body {
-    font-family: Arial, sans-serif;
+html, body {
+    height: 100%; /* Remplir toute la hauteur de la fenêtre */
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    line-height: 1.8; /* Augmentation de l'interligne pour améliorer la lisibilité */
-    background-color: #f9f9f9;
-    color: #333;
+    line-height: 1.8;
+    background-color: var(--fond-principal);
+    color: var(--texte-principal);
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700; /* Bold weight */
+    letter-spacing: 0.04em; /* Adjust letter spacing */
+}
+
+/* Le body devient un conteneur flex pour un alignement vertical */
+body {
+    display: flex;
+    flex-direction: column; /* Aligne les éléments en colonne */
 }
 
 /* Haut de page */
 header {
     text-align: center;
-    background-color: #444;
-    color: white;
+    background-color: var(--theme_2);
+    color: var(--texte-blanc);
     padding: 20px 0;
 }
 
 header h1 {
     margin: 0;
-    font-size: 2.5em; /* Augmenter la taille du titre */
+    font-size: 2.5em;
+	letter-spacing: 0.05em; /* Adjust letter spacing */
 }
 
 header p {
     margin: 10px 0 0;
-    font-size: 1.3em; /* Augmenter légèrement la taille de la description */
+    font-size: 1.3em;
 }
 
 /* Navigation */
 nav {
-    background-color: #222;
+    background-color: var(--theme_1);
+	border-top: 2px solid var(--theme_3); /* Bordure en haut du menu */
+    border-bottom: 2px solid var(--theme_3); /* Bordure en bas du menu */
 }
 
 nav ul {
@@ -40,78 +71,100 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0;
+    margin: 0 50px; /* Espacement entre les éléments du menu */
 }
 
 nav ul li a {
     display: block;
-    padding: 10px 20px;
+    padding: 15px 30px; /* Augmenter la taille de la zone cliquable */
     text-decoration: none;
-    color: white;
+    color: var(--texte-blanc); /* Couleur du texte définie précédemment */
     font-weight: bold;
+    font-size: 1.3em; /* Augmenter la taille du texte */
+    transition: background-color 0.3s ease; /* Pour une transition plus douce lors du hover */
+	letter-spacing: 0.1em; /* Adjust letter spacing */
 }
 
 nav ul li a:hover {
-    background-color: #555;
+    background-color: var(--hover-color); /* Utilise la couleur hover définie précédemment */
 }
 
 /* Section principale */
 main {
+    flex: 1; /* Le main occupe tout l'espace restant */
     padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start; /* Alignement du texte et de l'image en haut */
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
-    flex-wrap: wrap;
 }
 
+/* Titre de la section */
 main h2 {
-    font-size: 2em; /* Agrandir le titre de la section */
+    font-size: 2em;
     margin-bottom: 15px;
-}
-
-main .content {
-    flex: 1;
-    max-width: 60%;
-    text-align: justify; /* Justifier le texte */
-    margin-right: 20px; /* Ajouter de l'espace entre le texte et l'image */
-}
-
-main .content p {
-    font-size: 1.1em; /* Augmenter légèrement la taille de la police du texte */
-    margin-bottom: 20px; /* Espacement entre les paragraphes */
-    line-height: 1.7; /* Augmenter l'interligne dans les paragraphes */
-}
-
-main .photo {
-    flex: 0 0 35%; /* Empêche l'image d'occuper plus de 35% de la largeur */
     text-align: center;
 }
 
-main .photo img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+/* Wrapper pour contenir le texte et l'image côte à côte */
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+/* Texte */
+.content {
+    width: 60%; /* Le texte occupe 60% de la largeur */
+    text-align: justify;
+    padding-right: 20px;
+}
+
+.content p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+/* Image */
+.photo {
+    width: 25%; /* L'image occupe 25% de la largeur */
+    text-align: center;
+    padding: 5px; /* Ajout d'un padding autour de l'image pour permettre à la bordure de s'afficher correctement */
+    box-sizing: border-box; /* Inclut le padding dans le calcul de la largeur et de la hauteur */
+}
+
+.photo img {
+    width: 100%; /* L'image prend toute la largeur de son conteneur */
+    height: 100%; /* L'image prend toute la hauteur de son conteneur */
+    object-fit: cover; /* Assure que l'image couvre entièrement son conteneur sans déformation */
+    border-radius: 10px; /* Bord arrondi de l'image */
+    border: 2px solid var(--bordure-image); /* Bordure colorée autour de l'image */
 }
 
 /* Pied de page */
 footer {
-    background-color: #222;
-    color: white;
+    background-color: var(--theme_1);
+	border-top: 2px solid var(--theme_3);
+    color: var(--texte-blanc);
     text-align: center;
     padding: 10px 0;
+    width: 100%;
+	font-size: 1.2em; /* Taille de police similaire à celle du menu */
+    font-weight: bold; /* Mise en gras pour correspondre à l'apparence du menu */
+    /* Fixe le pied de page en bas*/
     position: relative;
     bottom: 0;
-    width: 100%;
 }
 
-footer a {
-    color: #66b2ff;
-    text-decoration: none;
-}
+/* Pied de page - liens */
 
 footer a:hover {
     text-decoration: underline;
+}
+
+/* Ligne de séparation */
+.divider {
+    border-bottom: 1px solid #000000; /* Ligne fine de couleur */
+    margin-top: 10px; /* Espace au-dessus de la ligne */
+    margin-bottom: 20px; /* Espace en dessous de la ligne */
 }
