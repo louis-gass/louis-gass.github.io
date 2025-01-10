@@ -74,7 +74,7 @@ main h2 {
 main .content {
     flex: 1;
     max-width: 60%;
-    text-align: left;
+    text-align: justify; /* Justifier le texte */
     margin-right: 20px; /* Ajouter de l'espace entre le texte et l'image */
 }
 
@@ -85,10 +85,8 @@ main .content p {
 }
 
 main .photo {
-    flex: 1;
-    max-width: 35%;
+    flex: 0 0 35%; /* Empêche l'image d'occuper plus de 35% de la largeur */
     text-align: center;
-    margin-left: 20px;
 }
 
 main .photo img {
