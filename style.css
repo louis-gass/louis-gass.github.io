@@ -115,6 +115,26 @@ nav ul {
     }
 }
 
+@media (max-width: 1024px) {
+    nav ul {
+        flex-wrap: wrap; /* Permet au menu de passer à plusieurs lignes */
+        justify-content: center; /* Centre les éléments dans l'espace disponible */
+    }
+
+    nav ul li {
+        margin: 10px 15px; /* Réduit légèrement l'espacement horizontal */
+    }
+
+    nav ul li a {
+        font-size: 1.1em; /* Ajuste la taille du texte */
+        padding: 10px 15px; /* Réduit la taille des zones cliquables */
+    }
+
+    header h1 {
+        font-size: 2em; /* Réduit légèrement la taille du titre */
+    }
+}
+
 /* Section principale */
 main {
     flex: 1; /* Le main occupe tout l'espace restant */
