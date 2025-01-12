@@ -4,6 +4,7 @@
     --theme_2: #fffde7; /* Titre, plus clair que le menu */
 	--theme_3: #333333; /*couleur des bordures*/
     --hover-color: #f1e267; /* Hover */
+	--hover-color-dark: #b59e2b; /* Hover */
     --texte-principal: #333333; /* Texte principal */
     --texte-blanc: #333333; /* Texte titre et menu */
     --fond-principal: #f9f9f9; /* Fond */
@@ -139,11 +140,8 @@ main {
     flex: 1; /* Le main occupe tout l'espace restant */
     padding: 20px;
     max-width: 1000px; /* Fixe une largeur maximale pour le main (par exemple 1000px) */
-    width: 100%; /* Assure que le main prend toute la largeur disponible */
     margin: 0 auto; /* Centre le contenu */
 }
-
-
 
 /* Titre de la section */
 main h2 {
@@ -232,7 +230,7 @@ footer a:hover {
 
 /* Style pour les liens hypertexte */
 .ext-link {
-    color: #0066cc; /* Couleur du lien */
+    color: var(--hover-color-dark); /* Couleur du lien */
     text-decoration: none; /* Enlever le soulignement */
 }
 
@@ -291,3 +289,70 @@ ul li a:hover {
     color: var(--hover-color);
 }
 
+/*style des citations*/
+.citation {
+    margin-bottom: 10px; /* Espacement entre les citations */
+	margin-top: 0; /* Espacement entre les citations */
+}
+
+.citation-numero {
+    font-weight: bold; /* Numéro en gras */
+    font-size: 1em; /* Taille un peu plus grande pour le numéro */
+    display: inline-block; /* Pour que le numéro et le titre soient sur la même ligne */
+    margin-right: 5px; /* Espacement entre le numéro et le titre */
+	margin-bottom: 0;
+	margin-top: 0;
+	margin-left:20px;
+}
+
+.citation-these {
+    display: inline-block;
+    font-weight: bold; /* Titre en gras */
+    font-size: 1.2em; /* Taille du titre */
+	margin-bottom: 0;
+	margin-top: 0;
+	margin-left:20px;
+}
+
+.citation-these a {
+    text-decoration: none; /* Supprimer le soulignement du lien par défaut */
+    color: inherit; /* Conserver la couleur du texte */
+}
+
+.citation-these a:hover {
+    color: var(--hover-color); /* Changer la couleur du lien au survol */
+    text-decoration: underline; /* Ajouter un soulignement au survol */
+}
+
+.citation-titre {
+    display: inline-block;
+    font-weight: bold; /* Titre en gras */
+    font-size: 1em; /* Taille du titre */
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
+.citation-titre a {
+    text-decoration: none; /* Supprimer le soulignement du lien par défaut */
+    color: inherit; /* Conserver la couleur du texte */
+}
+
+.citation-titre a:hover {
+    color: var(--hover-color-dark); /* Changer la couleur du lien au survol */
+    text-decoration: underline; /* Ajouter un soulignement au survol */
+}
+
+.citation-journal {
+    font-size: 1em; /* Taille normale pour le journal et l'année */
+    font-weight: normal; /* Pas de mise en gras */
+    margin-top: 0; /* Espacement au-dessus du journal */
+	margin-bottom: 0;
+	margin-left:20px;
+}
+
+.citation-collaborateurs {
+    font-style: italic; /* Collaborateurs en italique */
+    font-size: 1em; /* Taille de police standard */
+	margin-top: 0;
+	margin-bottom: 0;
+}
