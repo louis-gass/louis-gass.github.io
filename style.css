@@ -83,6 +83,21 @@ nav ul li a {
     font-size: 1.3em; /* Augmenter la taille du texte */
     transition: background-color 0.3s ease; /* Pour une transition plus douce lors du hover */
 	letter-spacing: 0.1em; /* Adjust letter spacing */
+	box-sizing: border-box; /* Inclut la bordure dans les dimensions de l'élément */
+	border: 2px solid transparent; /* Bordure initiale, transparente */
+    border-radius: 15px; /* Coins arrondis pour la bordure */
+	padding: 10px 10px; /* Ajuster le padding pour ne pas déplacer le texte */
+	margin: 5px 0;
+}
+
+nav ul li a.active {
+    border: 2px solid var(--theme_3); /* Ajoute une bordure */
+    border-radius: 15px; /* Coins arrondis pour la bordure */
+	padding-top: 10px; /* Ajuster le padding pour ne pas déplacer le texte */
+    padding-bottom: 10px; /* Ajuster le padding pour éviter le décalage */
+	margin: 5px 0;
+	background-color: var(--hover-color);
+    
 }
 
 nav ul li a:hover {
@@ -102,12 +117,12 @@ nav ul {
     }
 
     nav ul li {
-        margin: 10px 0; /* Réduit l'espacement entre les éléments */
+        margin: 0; /* Réduit l'espacement entre les éléments */
     }
 
     nav ul li a {
         font-size: 1em; /* Réduit la taille du texte dans le menu */
-        padding: 10px 20px; /* Réduit la taille des zones cliquables */
+        padding: 10px 15px; /* Réduit la taille des zones cliquables */
     }
 
     header h1 {
@@ -153,7 +168,7 @@ main h2 {
 
 /* Image */
 .photo {
-    width: 25%; /* L'image occupe 25% de la largeur */
+    width: 27%; /* L'image occupe 25% de la largeur */
     text-align: center;
     padding: 5px; /* Ajout d'un padding autour de l'image pour permettre à la bordure de s'afficher correctement */
     box-sizing: border-box; /* Inclut le padding dans le calcul de la largeur et de la hauteur */
@@ -193,4 +208,27 @@ footer a:hover {
     border-bottom: 1px solid #000000; /* Ligne fine de couleur */
     margin-top: 10px; /* Espace au-dessus de la ligne */
     margin-bottom: 20px; /* Espace en dessous de la ligne */
+}
+
+/* Conteneur pour le logo */
+.logo-container {
+    text-align: center; /* Centrer le logo horizontalement */
+    margin-top: 20px; /* Espace au-dessus du logo */
+    margin-bottom: 20px; /* Espace en dessous du logo */
+}
+
+/* Style pour l'image du logo */
+.logo {
+    max-width: 400px; /* Limite la largeur du logo */
+    height: auto; /* Ajuste la hauteur en fonction de la largeur */
+}
+
+/* Style pour les liens hypertexte */
+.ext-link {
+    color: #0066cc; /* Couleur du lien */
+    text-decoration: none; /* Enlever le soulignement */
+}
+
+.ext-link:hover {
+    text-decoration: underline; /* Ajouter un surlignement au survol */
 }
