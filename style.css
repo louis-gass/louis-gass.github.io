@@ -147,8 +147,8 @@ main {
 /* Titre de la section */
 main h2 {
     font-size: 2em;
-    margin-bottom: 15px;
-    text-align: center;
+    margin-bottom: 5px;
+    text-align: left;
 }
 
 /* Wrapper pour contenir le texte et l'image côte à côte */
@@ -188,6 +188,33 @@ main h2 {
     border: 2px solid var(--bordure-image); /* Bordure colorée autour de l'image */
 }
 
+.contentm {
+    width: 65%; /* Le texte occupe 60% de la largeur */
+    text-align: justify;
+    padding-left: 10px;
+}
+
+.contentm p {
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+/* Image */
+.photom {
+    width: 27%; /* L'image occupe 25% de la largeur */
+    text-align: center;
+    padding: 5px; /* Ajout d'un padding autour de l'image pour permettre à la bordure de s'afficher correctement */
+    box-sizing: border-box; /* Inclut le padding dans le calcul de la largeur et de la hauteur */
+}
+
+.photom img {
+    width: 100%; /* L'image prend toute la largeur de son conteneur */
+    height: 100%; /* L'image prend toute la hauteur de son conteneur */
+    object-fit: cover; /* Assure que l'image couvre entièrement son conteneur sans déformation */
+    border-radius: 10px; /* Bord arrondi de l'image */
+    border: 2px solid var(--bordure-image); /* Bordure colorée autour de l'image */
+}
+
 /* Pied de page */
 footer {
     background-color: var(--theme_1);
@@ -212,7 +239,7 @@ footer a:hover {
 /* Ligne de séparation */
 .divider {
     border-bottom: 1px solid #000000; /* Ligne fine de couleur */
-    margin-top: 10px; /* Espace au-dessus de la ligne */
+    margin-top: 5px; /* Espace au-dessus de la ligne */
     margin-bottom: 20px; /* Espace en dessous de la ligne */
 }
 
