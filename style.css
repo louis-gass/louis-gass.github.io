@@ -89,6 +89,32 @@ nav ul li a:hover {
     background-color: var(--hover-color); /* Utilise la couleur hover définie précédemment */
 }
 
+/* Navigation responsive */
+nav ul {
+    flex-wrap: wrap; /* Permet au menu de passer à plusieurs lignes si nécessaire */
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Affiche les éléments en colonne sur mobile */
+        align-items: center;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Réduit l'espacement entre les éléments */
+    }
+
+    nav ul li a {
+        font-size: 1em; /* Réduit la taille du texte dans le menu */
+        padding: 10px 20px; /* Réduit la taille des zones cliquables */
+    }
+
+    header h1 {
+        font-size: 1.8em; /* Réduit la taille du titre */
+    }
+}
+
 /* Section principale */
 main {
     flex: 1; /* Le main occupe tout l'espace restant */
