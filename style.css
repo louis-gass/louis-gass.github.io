@@ -102,11 +102,12 @@ nav ul li a.active {
     padding-bottom: 10px; /* Ajuster le padding pour éviter le décalage */
 	margin: 5px 0;
 	background-color: var(--hover-color);
-    
 }
 
 nav ul li a:hover {
     background-color: var(--hover-color); /* Utilise la couleur hover définie précédemment */
+	color : var(--texte-blanc);
+	text-decoration: none;
 }
 
 /* Navigation responsive */
@@ -320,7 +321,7 @@ ul li a:hover {
 }
 
 .citation-these a:hover {
-    color: var(--hover-color); /* Changer la couleur du lien au survol */
+    color: var(--hover-color-dark); /* Changer la couleur du lien au survol */
     text-decoration: underline; /* Ajouter un soulignement au survol */
 }
 
