@@ -42,6 +42,10 @@ header {
     background-color: var(--theme_2);
     color: var(--texte-blanc);
     padding: 20px 0;
+    width: 100%;
+    margin: 0; 
+    height: auto; /* Laisser la hauteur s'ajuster au contenu */
+    position: relative; /* Assurer que les éléments dans l'en-tête restent stables */
 }
 
 header h1 {
@@ -134,9 +138,12 @@ nav ul {
 main {
     flex: 1; /* Le main occupe tout l'espace restant */
     padding: 20px;
-    max-width: 1000px;
-    margin: 0 auto;
+    max-width: 1000px; /* Fixe une largeur maximale pour le main (par exemple 1000px) */
+    width: 100%; /* Assure que le main prend toute la largeur disponible */
+    margin: 0 auto; /* Centre le contenu */
 }
+
+
 
 /* Titre de la section */
 main h2 {
@@ -232,3 +239,55 @@ footer a:hover {
 .ext-link:hover {
     text-decoration: underline; /* Ajouter un surlignement au survol */
 }
+
+/*page recherche*/
+
+/* Appliquer un style aux titres de sections */
+.section-title {
+    font-size: 1.4em; /* Réduire la taille du titre */
+    font-weight: 700; /* Rendre le titre en gras */
+    color: var(--theme_3); /* Utiliser la couleur de la bordure */
+    text-align: left; /* Alignement à gauche */
+    margin-bottom: 10px; /* Espacement en bas du titre */
+    padding-left: 10px; /* Ajouter un peu d'espace à gauche pour ne pas coller au bord */
+    position: relative; /* Pour positionner la ligne en dessous */
+    display: inline-block; /* Pour que la ligne en dessous soit ajustée à la taille du texte */
+}
+
+/* Ajouter la ligne sous chaque titre de section */
+.section-title::after {
+    content: ""; /* Crée une ligne vide */
+    position: absolute; /* Placer la ligne en bas du titre */
+    width: 30vw; /* Largeur de la ligne égale à 100% de la largeur de la fenêtre */
+    height: 1px; /* Épaisseur de la ligne */
+    background-color: var(--theme_3); /* Couleur de la ligne (même que celle du texte) */
+    bottom: -3px; /* Placer la ligne légèrement sous le titre */
+    left: 10px; /* S'assurer que la ligne commence au bord gauche de l'écran */
+}
+
+/* Ajouter un espacement entre les éléments du menu et les sections */
+section {
+    margin-bottom: 30px; /* Espace entre les sections */
+}
+
+/* Retirer les puces de la liste et ajuster l'espacement */
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul li {
+    margin: 5px 0;
+}
+
+ul li a {
+    text-decoration: none;
+    color: var(--texte-principal);
+    font-size: 1.1em;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+    color: var(--hover-color);
+}
+
