@@ -11,6 +11,18 @@
     --bordure-image: #333333; /* Bordure image */
 }
 
+:root {
+    --theme_1: #ffecb3; /* Menu */
+    --theme_2: #fff8d5; /* Titre, plus clair que le menu (adjusted to be lighter and more yellow) */
+    --theme_3: #333333; /* couleur des bordures */
+    --hover-color: #ffb74d; /* Hover */
+    --hover-color-dark: #e6892c; /* Hover sombre */
+    --texte-principal: #333333; /* Texte principal */
+    --texte-blanc: #333333; /* Texte titre et menu */
+    --fond-principal: #f9f9f9; /* Fond */
+    --bordure-image: #333333; /* Bordure image */
+}
+
 
 
 
@@ -128,7 +140,7 @@ nav ul {
 
     nav ul li a {
         font-size: 1em; /* Réduit la taille du texte dans le menu */
-        padding: 10px 15px; /* Réduit la taille des zones cliquables */
+        padding: 8px 12px; /* Réduit la taille des zones cliquables */
     }
 
     header h1 {
