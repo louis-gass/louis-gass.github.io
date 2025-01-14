@@ -227,6 +227,31 @@ main h2 {
     border: 2px solid var(--bordure-image); /* Bordure colorée autour de l'image */
 }
 
+.contentg {
+    width: 40%; /* Le texte occupe 60% de la largeur */
+    text-align: justify;
+    padding-left: 10px;
+}
+
+.contentg p {
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+/* Image */
+.photog {
+    width: 50%; /* L'image occupe 25% de la largeur */
+    text-align: center;
+    padding: 5px; /* Ajout d'un padding autour de l'image pour permettre à la bordure de s'afficher correctement */
+    box-sizing: border-box; /* Inclut le padding dans le calcul de la largeur et de la hauteur */
+}
+
+.photog video {
+    width: 100%; /* La vidéo prend toute la largeur de son conteneur */
+    height: 100%; /* La vidéo prend toute la hauteur de son conteneur */
+    object-fit: cover; /* Assure que la vidéo couvre entièrement son conteneur sans déformation */
+}
+
 /* Pied de page */
 footer {
     background-color: var(--theme_1);
@@ -406,4 +431,10 @@ ul li a:hover {
     font-size: 1em; /* Taille de police standard */
 	margin-top: 0;
 	margin-bottom: 0;
+}
+
+video {
+    display: block;
+    margin: auto;
+    background-color: transparent; /* Fond transparent pour la vidéo */
 }
