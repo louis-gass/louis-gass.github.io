@@ -148,110 +148,6 @@ nav ul {
     }
 }
 
-/* Section principale */
-main {
-    flex: 1; /* Le main occupe tout l'espace restant */
-    padding: 20px;
-    max-width: 1000px; /* Fixe une largeur maximale pour le main (par exemple 1000px) */
-    margin: 0 auto; /* Centre le contenu */
-}
-
-/* Titre de la section */
-main h2 {
-    font-size: 2em;
-    margin-bottom: 5px;
-    text-align: left;
-}
-
-/* Wrapper pour contenir le texte et l'image côte à côte */
-.content-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-}
-
-/* Texte */
-.content {
-    width: 60%; /* Le texte occupe 60% de la largeur */
-    text-align: justify;
-    padding-right: 20px;
-}
-
-.content p {
-    font-size: 1.1em;
-    margin-bottom: 20px;
-    line-height: 1.7;
-}
-
-/* Image */
-.photo {
-    width: 27%; /* L'image occupe 25% de la largeur */
-    text-align: center;
-    padding: 5px; /* Ajout d'un padding autour de l'image pour permettre à la bordure de s'afficher correctement */
-    box-sizing: border-box; /* Inclut le padding dans le calcul de la largeur et de la hauteur */
-}
-
-.photo img {
-    width: 100%; /* L'image prend toute la largeur de son conteneur */
-    height: 100%; /* L'image prend toute la hauteur de son conteneur */
-    object-fit: cover; /* Assure que l'image couvre entièrement son conteneur sans déformation */
-    border-radius: 10px; /* Bord arrondi de l'image */
-    border: 2px solid var(--bordure-image); /* Bordure colorée autour de l'image */
-}
-
-.contentm {
-    width: 65%; /* Le texte occupe 60% de la largeur */
-    text-align: justify;
-    padding-left: 10px;
-}
-
-.contentm p {
-    font-size: 1em;
-    margin-bottom: 20px;
-}
-
-/* Image */
-.photom {
-    width: 27%; /* L'image occupe 25% de la largeur */
-    text-align: center;
-    padding: 5px; /* Ajout d'un padding autour de l'image pour permettre à la bordure de s'afficher correctement */
-    box-sizing: border-box; /* Inclut le padding dans le calcul de la largeur et de la hauteur */
-}
-
-.photom img {
-    width: 100%; /* L'image prend toute la largeur de son conteneur */
-    height: 100%; /* L'image prend toute la hauteur de son conteneur */
-    object-fit: cover; /* Assure que l'image couvre entièrement son conteneur sans déformation */
-    border-radius: 10px; /* Bord arrondi de l'image */
-    border: 2px solid var(--bordure-image); /* Bordure colorée autour de l'image */
-}
-
-.contentg {
-    width: 40%; /* Le texte occupe 60% de la largeur */
-    text-align: justify;
-    padding-left: 10px;
-}
-
-.contentg p {
-    font-size: 1em;
-    margin-bottom: 20px;
-}
-
-/* Image */
-.photog {
-    width: 50%; /* L'image occupe 25% de la largeur */
-    text-align: center;
-    padding: 5px; /* Ajout d'un padding autour de l'image pour permettre à la bordure de s'afficher correctement */
-    box-sizing: border-box; /* Inclut le padding dans le calcul de la largeur et de la hauteur */
-}
-
-.photog video {
-    width: 100%; /* La vidéo prend toute la largeur de son conteneur */
-    height: 100%; /* La vidéo prend toute la hauteur de son conteneur */
-    object-fit: cover; /* Assure que la vidéo couvre entièrement son conteneur sans déformation */
-}
-
 /* Pied de page */
 footer {
     background-color: var(--theme_1);
@@ -273,59 +169,13 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* Ligne de séparation */
-.divider {
-    border-bottom: 1px solid #000000; /* Ligne fine de couleur */
-    margin-top: 5px; /* Espace au-dessus de la ligne */
-    margin-bottom: 20px; /* Espace en dessous de la ligne */
-}
 
-/* Conteneur pour le logo */
-.logo-container {
-    text-align: center; /* Centrer le logo horizontalement */
-    margin-top: 20px; /* Espace au-dessus du logo */
-    margin-bottom: 20px; /* Espace en dessous du logo */
-}
-
-/* Style pour l'image du logo */
-.logo {
-    max-width: 400px; /* Limite la largeur du logo */
-    height: auto; /* Ajuste la hauteur en fonction de la largeur */
-}
-
-/* Style pour les liens hypertexte */
-.ext-link {
-    color: var(--hover-color-dark); /* Couleur du lien */
-    text-decoration: none; /* Enlever le soulignement */
-}
-
-.ext-link:hover {
-    text-decoration: underline; /* Ajouter un surlignement au survol */
-}
-
-/*page recherche*/
-
-/* Appliquer un style aux titres de sections */
-.section-title {
-    font-size: 1.4em; /* Réduire la taille du titre */
-    font-weight: 700; /* Rendre le titre en gras */
-    color: var(--theme_3); /* Utiliser la couleur de la bordure */
-    text-align: left; /* Alignement à gauche */
-    margin-bottom: 10px; /* Espacement en bas du titre */
-    padding-left: 10px; /* Ajouter un peu d'espace à gauche pour ne pas coller au bord */
-    position: relative; /* Pour positionner la ligne en dessous */
-    display: inline-block; /* Pour que la ligne en dessous soit ajustée à la taille du texte */
-}
-
-/* Ajouter la ligne sous chaque titre de section */
-.section-title::after {
-    content: ""; /* Crée une ligne vide */
-    position: absolute; /* Placer la ligne en bas du titre */
-    width: 30vw; /* Largeur de la ligne égale à 100% de la largeur de la fenêtre */
-    height: 1px; /* Épaisseur de la ligne */
-    background-color: var(--theme_3); /* Couleur de la ligne (même que celle du texte) */
-    bottom: -3px; /* Placer la ligne légèrement sous le titre */
-    left: 10px; /* S'assurer que la ligne commence au bord gauche de l'écran */
+/* Wrapper pour contenir le texte et l'image côte à côte*/
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
 }
 
 /* Ajouter un espacement entre les éléments du menu et les sections */
@@ -354,6 +204,106 @@ ul li a:hover {
     color: var(--hover-color);
 }
 
+/* Appliquer un style aux titres de sections */
+.section-title {
+    font-size: 1.4em; /* Réduire la taille du titre */
+    font-weight: 700; /* Rendre le titre en gras */
+    color: var(--theme_3); /* Utiliser la couleur de la bordure */
+    text-align: left; /* Alignement à gauche */
+    margin-bottom: 10px; /* Espacement en bas du titre */
+    padding-left: 10px; /* Ajouter un peu d'espace à gauche pour ne pas coller au bord */
+    position: relative; /* Pour positionner la ligne en dessous */
+    display: inline-block; /* Pour que la ligne en dessous soit ajustée à la taille du texte */
+}
+
+/* Ajouter la ligne sous chaque titre de section */
+.section-title::after {
+    content: ""; /* Crée une ligne vide */
+    position: absolute; /* Placer la ligne en bas du titre */
+    width: 40vw; /* Largeur de la ligne égale à 30% de la largeur de la fenêtre */
+    height: 1px; /* Épaisseur de la ligne */
+    background-color: var(--theme_3); /* Couleur de la ligne (même que celle du texte) */
+    bottom: -3px; /* Placer la ligne légèrement sous le titre */
+    left: 10px; /* S'assurer que la ligne commence au bord gauche de l'écran */
+}
+
+
+/* Style pour les liens hypertexte */
+.ext-link {
+    color: var(--hover-color-dark); /* Couleur du lien */
+    text-decoration: none; /* Enlever le soulignement */
+}
+
+.ext-link:hover {
+    text-decoration: underline; /* Ajouter un surlignement au survol */
+}
+
+/* Section principale */
+main {
+    flex: 1; /* Le main occupe tout l'espace restant */
+    padding: 20px;
+    max-width: 1000px; /* Fixe une largeur maximale pour le main (par exemple 1000px) */
+    margin: 0 auto; /* Centre le contenu */
+}
+
+/* Titre de la section */
+main h2 {
+    font-size: 2em;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+/* Ligne de séparation */
+.divider {
+    border-bottom: 1px solid var(--theme_3); /* Ligne fine de couleur */
+    margin-top: 5px; /* Espace au-dessus de la ligne */
+    margin-bottom: 20px; /* Espace en dessous de la ligne */
+}
+
+/* Contenu du texte */
+.content-ind {
+    width: 60%; /* Le texte occupe 60% de la largeur */
+    text-align: justify;
+    padding-right: 20px;
+}
+
+.content-ind p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+/* Image */
+.photo-ind {
+    width: 27%; /* L'image occupe 27% de la largeur */
+    text-align: center;
+    padding: 5px; /* Ajout d'un padding autour de l'image pour permettre à la bordure de s'afficher correctement */
+    box-sizing: border-box; /* Inclut le padding dans le calcul de la largeur et de la hauteur */
+}
+
+.photo-ind img {
+    width: 100%; /* L'image prend toute la largeur de son conteneur */
+    height: 100%; /* L'image prend toute la hauteur de son conteneur */
+    object-fit: cover; /* Assure que l'image couvre entièrement son conteneur sans déformation */
+    border-radius: 10px; /* Bord arrondi de l'image */
+    border: 2px solid var(--bordure-image); /* Bordure colorée autour de l'image */
+}
+
+/* Conteneur pour le logo */
+.logo-container {
+    text-align: center; /* Centrer le logo horizontalement */
+    margin-top: 20px; /* Espace au-dessus du logo */
+    margin-bottom: 20px; /* Espace en dessous du logo */
+}
+
+/* Style pour l'image du logo */
+.logo {
+    max-width: 400px; /* Limite la largeur du logo */
+    height: auto; /* Ajuste la hauteur en fonction de la largeur */
+}
+
+/*page recherche*/
+
 /*style des citations*/
 .citation {
     margin-bottom: 10px; /* Espacement entre les citations */
@@ -375,15 +325,6 @@ ul li a:hover {
     display: inline-block;
     font-weight: bold; /* Titre en gras */
     font-size: 1.2em; /* Taille du titre */
-	margin-bottom: 0;
-	margin-top: 0;
-	margin-left:20px;
-}
-
-.citation-course {
-    display: inline-block;
-    font-weight: bold; /* Titre en gras */
-    font-size: 1em; /* Taille du titre */
 	margin-bottom: 0;
 	margin-top: 0;
 	margin-left:20px;
@@ -423,7 +364,6 @@ ul li a:hover {
     margin-top: 0; /* Espacement au-dessus du journal */
 	margin-bottom: 0;
 	margin-left:20px;
-	width:80%
 }
 
 .citation-collaborateurs {
@@ -433,8 +373,117 @@ ul li a:hover {
 	margin-bottom: 0;
 }
 
-video {
-    display: block;
-    margin: auto;
-    background-color: transparent; /* Fond transparent pour la vidéo */
+
+/* Style pour la page miscellaneous*/
+.content-misc {
+    width: 65%; /* Le texte occupe 60% de la largeur */
+    text-align: justify;
+    padding-left: 10px;
+}
+
+.content-misc p {
+    font-size: 1em;
+    margin-bottom: 15px;
+	margin-top: 0px;
+}
+
+/* Image */
+.photo-misc {
+    width: 27%; /* L'image occupe 25% de la largeur */
+    text-align: center;
+    padding: 5px; /* Ajout d'un padding autour de l'image pour permettre à la bordure de s'afficher correctement */
+    box-sizing: border-box; /* Inclut le padding dans le calcul de la largeur et de la hauteur */
+}
+
+.photo-misc img {
+    width: 100%; /* L'image prend toute la largeur de son conteneur */
+    height: 100%; /* L'image prend toute la hauteur de son conteneur */
+    object-fit: cover; /* Assure que l'image couvre entièrement son conteneur sans déformation */
+    border-radius: 10px; /* Bord arrondi de l'image */
+    border: 2px solid var(--bordure-image); /* Bordure colorée autour de l'image */
+}
+
+/* Style pour la page Gallery  */
+.content-gal {
+    width: 60%; /* Le texte occupe 60% de la largeur */
+    text-align: justify;
+    padding-left: 10px;
+}
+
+.content-gal p {
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+
+.photo-gal {
+	margin-top: 20px;
+    width: 35%; /* L'image occupe 25% de la largeur */
+    text-align: center;
+    padding: 5px; /* Ajout d'un padding autour de l'image pour permettre à la bordure de s'afficher correctement */
+    box-sizing: border-box; /* Inclut le padding dans le calcul de la largeur et de la hauteur */
+}
+
+.photo-gal img{
+    width: 100%; /* L'image prend toute la largeur de son conteneur */
+    height: 100%; /* L'image prend toute la hauteur de son conteneur */
+    object-fit: cover; /* Assure que l'image couvre entièrement son conteneur sans déformation */
+}
+
+.video-gal {
+	margin-top: 20px;
+    width: 45%; /* L'image occupe 45% de la largeur */
+    text-align: center;
+    box-sizing: border-box; /* Inclut le padding dans le calcul de la largeur et de la hauteur */
+	margin-bottom : 20px;
+	margin-left : 10px;
+}
+
+.video-gal video {
+    width: 100%; /* La vidéo prend toute la largeur de son conteneur */
+    height: 100%; /* La vidéo prend toute la hauteur de son conteneur */
+    object-fit: cover; /* Assure que la vidéo couvre entièrement son conteneur sans déformation */
+}
+
+.citation-simulation {
+    font-size: 1em; /* Taille normale du texte */
+    margin-bottom: 20px; /* Ajout d'espace en dessous pour séparer les citations */
+	text-align: justify;
+	margin-left:10px;
+}
+
+.description-simulation {
+    font-size: 1em; /* Taille normale pour le journal et l'année */
+    font-weight: normal; /* Pas de mise en gras */
+    margin-top: 0; /* Espacement au-dessus du journal */
+	margin-bottom: 0;
+	margin-left:10px;
+	text-align: justify;
+}
+
+/*style pour la page teaching*/
+
+.section-description {
+    font-size: 1em; /* Taille normale du texte */
+    margin-bottom: 20px; /* Ajout d'espace en dessous pour séparer les citations */
+    margin-left: 20px; /* Alignement avec les citations */
+	text-align: justify;
+}
+
+.citation-course {
+    display: inline-block;
+    font-weight: bold; /* Titre en gras */
+    font-size: 1em; /* Taille du titre */
+	margin-bottom: 0;
+	margin-top: 0;
+	margin-left:20px;
+}
+
+.description-course {
+    font-size: 1em; /* Taille normale pour le journal et l'année */
+    font-weight: normal; /* Pas de mise en gras */
+    margin-top: 0; /* Espacement au-dessus du journal */
+	margin-bottom: 0;
+	margin-left:20px;
+	text-align: justify;
 }

@@ -27,25 +27,98 @@
 
     <!-- Section principale -->
     <main>
-    <section id="juggling">
-        <h2 class="section-title">Spherical random waves</h2>
-        <ul>
-            <div class="content-wrapper">
-					<div class="contentg">
-						<p>
-							<p>This page is in construction. Here is a teaser.
-							<!--<a href="https://users.flatironinstitute.org/~ahb/" class = "ext-link" target="_blank">Alex Barnett</a>.--!>
-							</p>
-						</p>
+	<ul>
+    <section id="spherical">
+        <h2 class="section-title">The spherical random waves model</h2>
+		<div class="content-wrapper">
+			<div class="content-gal">
+				<p>
+					The spherical random waves model is a random field defined on the sphere that depends on 
+					an integer &lambda;, the <i>frequency parameter</i>. There are several
+					possible definitions of this model, which are equivalent up to a (random) scaling factor. 
+					One can define it as a rotationally invariant distribution on the eigenspace of the 
+					Laplace operator on the sphere, associated with the eigenvalue &lambda;(&lambda;+1). Alternatively, it can be described as a 
+					random linear combination of spherical harmonics of degree &lambda; with i.i.d. Gaussian coefficients.
+				</p>
+				<p>
+					I wrote some MATLAB codes based on those that can be found on the webpage of
+					<a href="https://users.flatironinstitute.org/~ahb/" class="ext-link" target="_blank">Alex Barnett</a>
+					to simulate various quantities related to the spherical random waves model. The source codes can be found
+					<a href=" " class="ext-link" target="_blank">here</a> (coming soon). The videos have been processed with Blender
+					and encoded in WebM format with an alpha channel (for transparency). There may be some issues displaying
+					them properly in older web browsers.
+				</p>
+			</div>
+			<div class="photo-gal">
+						<img src="sphere.png" alt="sphere" />
 					</div>
-					<div class="photog">
-						<video controls autoplay loop muted>
-						<source src="vid2.webm" type="video/webm">
+		</div>
+		<ul>
+			<div class = "citation">
+				<p class="citation-simulation"><strong>Frequency increment</strong></p>
+				<p class="description-simulation"> 
+					As the frequency increases, a generic spherical random wave
+					becomes increasingly oscillatory. The following videos show the heatmap of a spherical
+					random wave along with its positive and negative values as the frequency parameter increases.
+				</p>
+			</div>
+			<div class="content-wrapper">
+					<div class="video-gal">
+						<video controls loop muted>
+						<source src="vid1.webm" type="video/webm" >
 						Votre navigateur ne supporte pas la lecture des vidéos WebM.
 					</video>
 					</div>
-				</div>
-        </ul>
+					<div class="video-gal">
+						<video controls loop muted>
+						<source src="vid2.webm" type="video/webm" >
+						Votre navigateur ne supporte pas la lecture des vidéos WebM.
+					</video>
+					</div>
+			</div>
+			<div class = "citation">
+				<p class="citation-simulation"><strong>Band enlargement</strong></p>
+				<p class="description-simulation"> 
+					The <i>large band</i> spherical random waves model is defined in a similar manner. Instead of taking
+					a Gaussian combination of spherical harmonics of degree &lambda;, this model is defined by
+					a Gaussian combination of spherical harmonics of degree lower than &lambda;. The resulting model
+					is less oscillatory and has shorter range dependencies. The following videos show a smooth transition
+					between the large band model and the true spherical random wave model.
+				</p>
+			</div>
+			<div class="content-wrapper">
+					<div class="video-gal">
+						<video controls loop muted>
+						<source src="vid3.webm" type="video/webm" >
+						Votre navigateur ne supporte pas la lecture des vidéos WebM.
+					</video>
+					</div>
+					<div class="video-gal">
+						<video controls loop muted>
+						<source src="vid4.webm" type="video/webm" >
+						Votre navigateur ne supporte pas la lecture des vidéos WebM.
+					</video>
+					</div>
+			</div>
+			<div class = "citation">
+				<p class="citation-simulation"><strong> Moving wave</strong></p>
+				<p class="description-simulation"> 
+					Coming soon. 
+				</p>
+			</div>
+			<div class = "citation">
+				<p class="citation-simulation"><strong> Level increment</strong></p>
+				<p class="description-simulation"> 
+					Coming soon. 
+				</p>
+			</div>
+			<div class="content-wrapper">
+					<div class="video-gal">
+					</div>
+					
+			</div>
+		</ul>
+	</ul>
     </section>
 	</main>
 
